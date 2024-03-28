@@ -19,11 +19,11 @@ const AnimalSchema = mongoose.Schema({
         minLength: 5,
         require: true,
     },
-    Image: {
+    image: {
         type: String,
-        require: true,
+        default: null
     },
-    user: { type: Schema.ObjectId, ref: 'User' }
+    user: { type: mongoose.Schema.ObjectId, ref: 'User' } //referenciamos con la coleccion de usuarios
 });
 
 module.exports = mongoose.model('Animal', AnimalSchema);
