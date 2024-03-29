@@ -4,13 +4,13 @@ const AnimalSchema = mongoose.Schema({
     name: {
         type: String,
         maxLength: 50,
-        minLength: 8,
+        minLength: 4,
         require: true,
     },
     description: {
         type: String,
         maxLength: 50,
-        minLength: 8,
+        minLength: 4,
         require: true,
     },
     year: {

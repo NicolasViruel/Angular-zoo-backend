@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-
+const cors = require("cors")
 require('dotenv').config();
 const conectarDB = require("./DataBase/index");
 
@@ -15,6 +15,7 @@ const app = express();
 //Parseamos los datos y Cors
 app.use(bodyParser.urlencoded( {extended:true} ));
 app.use(bodyParser.json());
+app.use(cors());
 
 
 //Mis rutas
