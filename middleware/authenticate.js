@@ -4,6 +4,7 @@ const moment = require("moment");
 
 const ensureAuth = (req, res, next) =>{
     if (!req.headers.authorization) {
+        console.log(req.headers.authorization);
         return res.status(403).send({msg: "La peticion no tiene la cabecera de Autenticacion"})
     }
     //en caso de que si llegue la cabecera
